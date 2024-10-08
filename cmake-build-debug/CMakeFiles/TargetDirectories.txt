@@ -1,0 +1,3 @@
+/Users/tevin/Desktop/L3/S5/Gestion de projet/Projet/Sylogisme/cmake-build-debug/CMakeFiles/Sylogisme.dir
+/Users/tevin/Desktop/L3/S5/Gestion de projet/Projet/Sylogisme/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/tevin/Desktop/L3/S5/Gestion de projet/Projet/Sylogisme/cmake-build-debug/CMakeFiles/rebuild_cache.dir
