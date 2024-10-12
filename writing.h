@@ -8,6 +8,8 @@
  */
 char **initProp(void);
 
+char ***initQuantificateur(void);
+
 /* Add a string at the index of the table of strings previously initiated.
  * Returns 0 if it fails else 1.
  * Exemple of usage :
@@ -46,5 +48,7 @@ void printProps(char **props);
  * Removes and free all the elements inside propTable.
  */
 void freeProp(char **props);
+
+void freeQuantificateur(char ***quant);
 
 #endif //WRITING_H

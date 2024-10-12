@@ -3,5 +3,7 @@
 
 void printHeader(void);
 void printPropChoice(char **props);
+void printAddPropChoice(char **propTable);
+void printAddProp(char **propTable, int index);
 
 #endif //DISPLAYCONSOLE_H

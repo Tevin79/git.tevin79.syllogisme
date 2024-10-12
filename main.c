@@ -18,5 +18,6 @@ int main(void)
         next = false;
     }
     freeProp(propTable);
+
     return EXIT_SUCCESS;
 }

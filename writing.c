@@ -2,13 +2,33 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define TABLE_SIZE 3
+#define TABLE_SIZE 7
 
-char **initProp(void) {
-    char **table = (char **)malloc(sizeof(char *) * TABLE_SIZE);
+int **initProp(void) {
+    int **table = (int **)malloc(sizeof(int *) * TABLE_SIZE);
     for (int i = 0; i < TABLE_SIZE; i++) {
         table[i] = NULL;
     }
+    return table;
+}
+
+char ***initQuantificateur(void) {
+    char ***table = (char ***)malloc(sizeof(char **) * 2);
+    for (int i = 0; i < 2; i++) {
+        table[i] = (char **)malloc(sizeof(char *) * 50);
+        for (int j = 0; j < 50; j++) {
+            table[i][j] = NULL;
+        }
+    }
+    char *tt = "Tout";
+    char *ie = "Il existe";
+    char *c = "Certains";
+    table[0][0] = (char *)malloc(sizeof(char) * strlen(tt));
+    table[1][0] = (char *)malloc(sizeof(char) * strlen(ie));
+    table[1][1] = (char *)malloc(sizeof(char) * strlen(c));
+    strcpy(table[0][0], tt);
+    strcpy(table[1][0], ie);
+    strcpy(table[1][1], c);
     return table;
 }
 
@@ -55,4 +75,15 @@ void freeProp(char **props) {
         }
         free(props);
     }
+}
+
+void freeQuantificateur(char ***quant) {
+    for (int i = 0; i < 2; i++) {
+        int j = 0;
+        while (quant[i][j] != NULL) {
+            free(quant[i][j]);
+        }
+        free(quant[i]);
+    }
+    free(quant);
 }
